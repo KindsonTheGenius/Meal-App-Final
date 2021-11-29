@@ -13,19 +13,19 @@ The application is a REST API for managing meals.
 •	Swagger for creating the REST API documentation
 •	Flyway for db migration
 
-Unit Tests
+## Unit Tests
 Unit tests for the four CRUD methods was created and can be found in the src/test/java directory.
 
-Database Migration
+## Database Migration
 Flyway dependency have been added to provide migration for the postgres database. The migration files are available in the src/main/resources/db.migration directory. The migrations are as follows:
 •	V1_0_0__init.sql – Contains script for creating the initial database schema
 •	V1_0_1__seeders.sql – contains script for inserting initial records into the database.
 
-Deployment
+## Deployment
 The API could be deployed to a Kubernetes cluster either using basic deployment.yml file or vial helm install. 
 The files are specified as follows:
 
-Without Helm Chart
+### Without Helm Chart
 •	postgres-configmap.yml – contains the configuration for the postgres database
 •	postgres-credentials.yml – contains the username, password etc for the postgres database
 •	postgres-deployment.yml – deployment config for postgres
@@ -34,14 +34,14 @@ So without helm we can apply the configurations via:
 
 kubectl apply -f <yml file>
 
-With Helm Chart
+### With Helm Chart
 All the files are available in the mealchart directory. So the meal-app-final can be deployed by running the command:
 
 helm install newchart mealchart
 
 Note that this helm chart was created for deploying just the API and therefore, postgres database should already by deployed to the cluster.
 
-API Specification
+## API Specification
 The apis are as follows:
 
 GET/
@@ -72,7 +72,7 @@ POST/meals
 addMeal
 curl -X POST "http://127.0.0.1:59515/meals" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"description\": \"Garry and Soup\", \"gluton_free\": true, \"id\": 0, \"imageUrl\": \"/photo\", \"ingredients\": \"Pepper\", \"kcal\": 0, \"meal_name\": \"Rice\", \"price\": 0, \"spicy\": true}"
 
-API Documentation
+## API Documentation
 I have included a Swagger API documentation which is available via the route:
 /swagger-ui/
 
