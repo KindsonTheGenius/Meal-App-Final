@@ -1,4 +1,4 @@
-#Meal App Task for DevOps (meal-app-final)
+#Meal App Task for DevOps (meal-app-final)#
 This is a brief documentation of meal app task by Nokia Budapest.
 
 Description
