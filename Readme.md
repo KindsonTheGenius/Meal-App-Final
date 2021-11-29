@@ -4,7 +4,7 @@ This is a brief documentation of meal app task by Nokia Budapest.
 Description
 The application is a REST API for managing meals.
 
-Technology Stack Specification
+## Technology Stack Specification
 •	Spring Framework was used for the API design 
 •	PostgreSQL for data persistence
 •	Docker - A docker image of the application was built for a local docker environment.
