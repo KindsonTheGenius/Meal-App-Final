@@ -45,31 +45,31 @@ Note that this helm chart was created for deploying just the API and therefore, 
 The apis are as follows:
 
 ### GET/
-Index
+Index\
 curl -X GET "http://127.0.0.1:59515/" -H "accept: */*"
 
 
 ### GET/meal/{id}
-getMeal
+getMeal\
 curl -X GET "http://127.0.0.1:59515/meal/2" -H "accept: */*"
 
 
 ### PUT/meal/{id}
-Save
+Save\
 curl -X PUT "http://127.0.0.1:59515/meal/2" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"id\": 2, \"meal_name\": \"Beans and Break\", \"price\": 56.0, \"ingredients\": null, \"spicy\": null, \"gluton_free\": null, \"description\": null, \"kcal\": null, \"imageUrl\": null}"
 
 ### DELETE/meal/{id}
-deleteMeal
+deleteMeal\
 curl -X DELETE "http://127.0.0.1:59515/meal/3" -H "accept: */*"
 
 
 ### GET/meals
-getMeals
+getMeals\
 curl -X GET "http://127.0.0.1:59515/meals" -H "accept: */*"
 
 
 ### POST/meals
-addMeal
+addMeal\
 curl -X POST "http://127.0.0.1:59515/meals" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"description\": \"Garry and Soup\", \"gluton_free\": true, \"id\": 0, \"imageUrl\": \"/photo\", \"ingredients\": \"Pepper\", \"kcal\": 0, \"meal_name\": \"Rice\", \"price\": 0, \"spicy\": true}"
 
 ## API Documentation
